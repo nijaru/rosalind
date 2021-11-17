@@ -81,4 +81,9 @@ def prot(seq):
     return out
 
 
-print(prot(SEQ))
+def main():
+    print(prot(SEQ))
+
+
+if __name__ == "__main__":
+    main()
