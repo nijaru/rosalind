@@ -5,6 +5,14 @@ def parse_fasta(fasta):
     return zip(*parse_fasta_dict(fasta).items())
 
 
+def parse_fasta_keys(fasta):
+    return list(parse_fasta_dict(fasta).keys())
+
+
+def parse_fasta_values(fasta):
+    return list(parse_fasta_dict(fasta).values())
+
+
 def parse_fasta_dict(fasta):
     # format into lines [1,2...] where 1 is sample id and 2 is sample
     fasta = fasta.strip().split(">")[1:]
