@@ -2,4 +2,9 @@ def rna(seq):
     return seq.replace("T", "U")
 
 
-print(rna("AAAACCCGGT"))
+def main():
+    print(rna("AAAACCCGGT"))
+
+
+if __name__ == "__main__":
+    main()
