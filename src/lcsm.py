@@ -1,4 +1,4 @@
-from rosalib import parse_fasta
+from rosalib import parse_fasta_values
 
 FASTA = """>Rosalind_1
 GATTACA
@@ -9,7 +9,7 @@ ATACA"""
 
 
 def lcsm(fasta):
-    _, values = parse_fasta(fasta)
+    values = parse_fasta_values(fasta)
     sub = ""
     if len(values) > 1 and len(values[0]) > 0:
         for i in range(len(values[0])):
