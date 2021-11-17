@@ -10,4 +10,4 @@ def parse_fasta(fasta):
 
     # create dict {sample_id: sample}
     pairs = {fasta[i]: fasta[i + 1] for i in range(0, len(fasta), 2)}
-    return pairs
+    return zip(*pairs.items())

@@ -9,7 +9,7 @@ ATACA"""
 
 
 def lcsm(fasta):
-    values = list(parse_fasta(fasta).values())
+    _, values = parse_fasta(fasta)
     sub = ""
     if len(values) > 1 and len(values[0]) > 0:
         for i in range(len(values[0])):

@@ -85,7 +85,7 @@ CACAGGTCAGGAAACCGGCTTTTTACCTCGGC
 
 
 def gc(fasta):
-    keys, values = zip(*parse_fasta(fasta).items())
+    keys, values = parse_fasta(fasta)
 
     # find max percent occurence in sequence
     p = [(seq.count("C") + seq.count("G")) / len(seq) * 100 for seq in values]
