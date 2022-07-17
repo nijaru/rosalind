@@ -96,4 +96,10 @@ def gc(fasta):
     return [keys[i], p[i]]
 
 
-[print(x) for x in gc(FASTA)]
+def main():
+    for x in gc(FASTA):
+        print(x)
+
+
+if __name__ == "__main__":
+    main()
