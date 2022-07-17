@@ -12,11 +12,30 @@ def parse_fasta_keys(fasta):
 def parse_fasta_values(fasta):
     return list(parse_fasta_dict(fasta).values())
 
+""">Sample_id
+ACGTACGTACGTACGTACGTACGTACGTACGT
+
+>Sample_id
+ACGTACGTACGTACGTACGTACGTACGTACGT
+
+>Sample_id
+ACGTACGTACGTACGTACGTACGTACGTACGT
+
+>Sample_id
+ACGTACGTACGTACGTACGTACGTACGTACGT
+
+>Sample_id
+ACGTACGTACGTACGTACGTACGTACGTACGT
+
+>Sample_id
+ACGTACGTACGTACGTACGTACGTACGTACGT
+"""
+
 
 def parse_fasta_dict(fasta):
     # format into lines [1,2...] where 1 is sample id and 2 is sample
     fasta = fasta.strip().split(">")[1:]
-    fasta = [x.split("\n", 1) for x in fasta]
+    fasta = [x.strip().split("\n") for x in fasta]
     fasta = list(itertools.chain.from_iterable(fasta))
     fasta = [x.replace("\n", "") for x in fasta]
 
